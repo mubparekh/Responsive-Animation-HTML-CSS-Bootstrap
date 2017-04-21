@@ -1,0 +1,311 @@
+/*Press F12 to debug on the HTML browser page and then select arrow to select the item to be debuged*/
+
+body {
+  padding-top: 85px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.margin-top-30{
+  margin-top:30px;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family:"Raleway", sans-serif;
+  color:#406c96;
+}
+
+.highlight-primary{
+  background:#406c96;
+  color:#fff;
+  padding:5px 25px;
+  display:inline;
+  line-height:60px;
+  border-radius:5px;
+}
+
+a{
+  color:#406c96;
+}
+
+#logo{
+  display: block;
+  height:70px; 
+  width:120px; 
+  padding-bottom: 5px;
+}
+
+.navbar{
+  font-family:"Raleway", sans-serif;
+  background: #fff;
+  min-height:85px;
+  text-transform:uppercase;
+  border-bottom:#ccc solid 1px;
+  padding-top:15px;
+  text-align:center;
+}
+
+.navbar-brand{
+  padding:0;
+}
+
+.navbar span{
+  font-size:10px;
+  color:#ccc;
+  text-align:center;
+}
+
+/*sets li items without affecting any inner list items*/
+.navbar-nav > li{
+  padding-bottom:5px;
+}
+
+/*sets links*/
+.navbar-nav > li > a{
+  padding-bottom:0;
+  color:#666;
+}
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus{
+  background:none;
+}
+
+.navbar li:hover{
+  background:#ddd;
+  cursor:pointer;
+}
+
+.navbar li li{
+  padding:5px 0;
+  border-left:4px solid #f4f4f4;
+}
+
+.navbar li li:hover{
+  border-left:4px solid #406c96;
+}
+
+.navbar li.active{
+  background:#406c96;
+  color:#fff;
+}
+
+.navbar li.active a{
+  color:white;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-nav:focus{
+background-color:#ddd;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  backgroung:none;
+  color:#fff;
+} 
+
+section{
+  padding:30px 0;
+  overflow:hidden;  
+}
+
+section h1{
+  margin:30px 0;
+}
+
+.section-showcase img{
+  width:120%;
+  postition:relative;
+  float:right;
+  margin-right:-500px;
+}
+
+.section-default{
+  background:#f7f8f7;
+}
+
+.section-primary{
+  background:#406c96;
+  color:#fff;
+}
+
+.list-feature{
+  list-style:none;
+  line-height:2em;
+  pedding:5px 0;
+  font-size:18px;
+}
+
+.fa{
+  margin-right:10px;
+  color:#406c96;
+  font-size:1.5em;
+}
+
+.fa-lg{
+  font-size:4em;
+}
+
+.fa-white{
+  color:#fff;
+}
+
+.content-icons{
+  text-align:center;
+}
+
+.content-icons h4{
+  color:#fff;
+}
+
+.content-icons i{
+  display:block;
+  margin-bottom:15px;
+}
+
+.content-devices h1{
+  text-align:center;
+}
+
+/*#laptop{
+  height:190px;
+  width:310px;
+}*/
+
+/*#desktop{
+  height:300px;
+  width:410px;
+}*/
+
+/*#mobile{
+  height:180px;
+  width:150px;
+}*/
+
+
+.content-devices{
+ text-align:center;
+}
+
+.content-devices img{
+  position:relative;
+}
+
+.content-devices img#desktop{
+  height:300px;
+  width:375px;
+}
+
+.content-devices img#laptop{
+  height:190;
+  margin-left:-95px;
+  z-index:100;
+  width:290px;
+}
+
+.content-devices img#mobile{
+  height:95px;
+  width:60px;
+  z-index:100;
+}
+
+#footer-main{
+  background:#406c96;
+  color:#fff;
+  border-top:#333 8px solid;
+  padding:40px 0;
+}
+
+
+#footer-main h4, #footer-main a{
+  color:#fff;
+}
+
+#footer-main li{
+  list-style:square;
+  line-height:2em;
+}
+
+/* For animation of images in the template CSS3 is used. Repeatition in the adding prefixes can be avoided if compiters like Sass or less is used.*/
+
+.animate{
+  -moz-transition:1s ease-in-out;
+  -webkit-transition:1s ease-in-out;
+  transition:1s ease-in-out;
+
+  -moz-animation-fill-mode:forwards;
+  -webkit-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -moz-animiation-duration:1s;
+  -webkit-animiation-duration:1s;
+  animiation-duration:1s;
+}
+
+img#main.animate{
+  -moz-transform:translate(-40em,0);
+  -webkit-transform:translate(-40em,0);
+  transform:translate(-40em,0);
+}
+
+/*Moving image- laptop to the right so positive value of 12em added*/
+img#laptop.animate{
+  -moz-transform:translate(12em,0);
+  -webkit-transform:translate(12em,0);
+  transform:translate(12em,0);
+}
+
+/*Moving image- mobile to the left so negative value of 8em added*/
+img#mobile.animate{
+  -moz-transform:translate(-8em,0);
+  -webkit-transform:translate(-8em,0);
+  transform:translate(-8em,0);
+}
+
+/*set media query for tablet size devices. Stop animation of images at min width with smart phones and change size of images so that they can animate correctly*/
+
+@media(min-width:601px) and (max-width:960px){
+  .content-devices img#desktop{
+    width:280px;
+  }
+
+  .content-devices img#laptop{
+    width:235px;
+  }
+
+  .content-devices img#mobile{
+    width:45px;
+  }
+}
+
+@media(max-width:600px){
+  .content-devices img#desktop{
+    height:190px;
+    width:130px;
+  }
+
+  .content-devices img#laptop{
+    display:none;
+  }
+
+  .content-devices img#mobile{
+    display:none;
+  }
+}
+
+/*tablet and down*/
+@media(max-width:768px){
+  h1{
+    font-align:35px !important;
+    text-align:center !important;
+  }
+
+  h2{
+    font-size:25px !important;
+    text-align:center !important;
+    display:block !important;
+    line-height:1.5em !important;
+  }
+
+  .content-icons i{
+    margin-top:20px;
+  }
+}
+
